@@ -12,8 +12,8 @@ export const loginWithGoogle = async () => {
   try {
     await account.createOAuth2Session(
       OAuthProvider.Google,
-      getRedirectUrl('/success'),
-      getRedirectUrl('/failed')
+      "https://cloud.appwrite.io/auth/signin", // Redirect here instead of Vercel domain
+      "https://cloud.appwrite.io/auth/signout"
     );
   } catch (error) {
     console.error("OAuth error:", error);
