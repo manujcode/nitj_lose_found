@@ -4,8 +4,8 @@ import { account, OAuthProvider } from './appwrite.js'
 export const loginWithGoogle = async () => {
   try {
     await account.createOAuth2Session(OAuthProvider.Google,
-        'http://localhost:5173/success',
-        'http://localhost:5173/failed'
+        'https://nitj-lose-found.vercel.app/success',
+        'https://nitj-lose-found.vercel.app/failed'
     )
   } catch (error) {
     console.error(error,"xxxxx")
